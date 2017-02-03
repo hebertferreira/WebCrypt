@@ -49,14 +49,45 @@ public class DaoPresunto {
         pst.setString(1, novoPresunto.getNome());
         pst.setString(2, novoPresunto.getEmail());
         
-        if(novoPresunto.getNome() == null){
-            
-            System.err.println("Eta nois errando");
-            
-        }else{
-            pst.execute();  
-            pst.close();    
-        }
+        pst.execute();  
+        pst.close();    
         
     }
+    
+        public void alterar(Presunto novoPresunto)throws Exception{
+
+            pst = con.prepareStatement("update presunto set nome = ? , altura = ? , peso = ? where email = ?");
+
+            pst.setString(1, novoPresunto.getNome());
+            pst.setDouble(2, novoPresunto.getAltura());
+            pst.setDouble(3, novoPresunto.getPeso());
+            pst.setString(4, novoPresunto.getEmail());
+            
+            pst.execute();
+            pst.close();
+        }
+        
+        
+        public Presunto consultar(Presunto novoPresunto)throws Exception{
+        
+        Presunto temp = null;
+        
+        pst = con.prepareStatement("select *  from presunto where nome = ?");
+        pst.setString(1, novoPresunto.getNome());
+        rs = pst.executeQuery();
+        
+        if(rs.next()){
+            temp = new Presunto();
+            
+            temp.setNome(rs.getString(1));
+            temp.setEmail(rs.getString(2));
+            temp.setAltura(rs.getDouble(3));
+            temp.setPeso(rs.getDouble(4));
+        }
+        
+        pst.close();
+        return temp;
+    }
+    
 }
+

@@ -12,10 +12,14 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Informativo do Sepultado</h1>
+        <h1>Informativo do Miserável</h1>
         
-        <b>Validade:</b> ${mensagem}<br>
+        <b>Ixi</b> ${mensagem}<br>
+        <br>
         
+        
+
+                
         <a href="index.html">Voltar a pagina principal</a>
     </body>
 </html>

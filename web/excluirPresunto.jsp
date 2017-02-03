@@ -14,7 +14,7 @@
     <body>
         
         <h1>Incinerador de Defuntos</h1>
-        <form action="controle.presunto.excluir">
+        <form action="controle.presunto.excluir" method="get">
             <input type="text" name="txtNome" value="" placeholder="Nome do finado">
             <input type="text" name="txtEmail" value="" placeholder="Email do finado">            
             <input type="submit" value="Incinerar">

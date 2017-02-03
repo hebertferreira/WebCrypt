@@ -3,12 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/hebertferreira/WebCrypt/web/incluirPresunto.jsp</file>
-            <file>file:/home/hebertferreira/WebCrypt/src/java/controle/PresuntoControleIncluir.java</file>
-            <file>file:/home/hebertferreira/WebCrypt/web/resultado.jsp</file>
-            <file>file:/home/hebertferreira/WebCrypt/web/index.html</file>
-            <file>file:/home/hebertferreira/WebCrypt/src/java/persistencia/DaoPresunto.java</file>
-            <file>file:/home/hebertferreira/WebCrypt/web/WEB-INF/web.xml</file>
+            <file>file:/home/hebertferreira/NetBeansProjects/WebCrypt/src/java/controle/PresuntoControleConsultar.java</file>
         </group>
     </open-files>
 </project-private>

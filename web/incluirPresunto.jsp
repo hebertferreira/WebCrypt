@@ -14,7 +14,7 @@
     <body>
         
         <h1>Cadastro de Novo Presunto</h1>
-        <form action="controle.presunto.incluir">
+        <form action="controle.presunto.incluir" method="post">
             <input type="text" name="txtNome" value="" placeholder="Nome do presunto">
             <input type="text" name="txtEmail" value="" placeholder="Email do finado">
             <input type="text" name="txtAltura" value="" placeholder="Altura">

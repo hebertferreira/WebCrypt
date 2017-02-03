@@ -14,7 +14,7 @@
     <body>
         <h1>Informativo do Sepultado</h1>
         
-        <b>Nome:</b> ${finado}<br>
+        <b>Validade:</b> ${mensagem}<br>
         
         <a href="index.html">Voltar a pagina principal</a>
     </body>

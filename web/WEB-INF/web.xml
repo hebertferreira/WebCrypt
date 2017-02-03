@@ -8,6 +8,14 @@
         <servlet-name>PresuntoControleExcluir</servlet-name>
         <servlet-class>controle.PresuntoControleExcluir</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PresuntoControleConsultar</servlet-name>
+        <servlet-class>controle.PresuntoControleConsultar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PresuntoControleAlterar</servlet-name>
+        <servlet-class>controle.PresuntoControleAlterar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>PresuntoControleIncluir</servlet-name>
         <url-pattern>/controle.presunto.incluir</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>PresuntoControleExcluir</servlet-name>
         <url-pattern>/controle.presunto.excluir</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PresuntoControleConsultar</servlet-name>
+        <url-pattern>/controle.presunto.buscar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PresuntoControleAlterar</servlet-name>
+        <url-pattern>/controle.presunto.alterar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
