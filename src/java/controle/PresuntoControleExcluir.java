@@ -46,6 +46,7 @@ public class PresuntoControleExcluir extends HttpServlet {
             novoPresunto.setNome(request.getParameter("txtNome"));
             novoPresunto.setEmail(request.getParameter("txtEmail"));
             
+            
             novoDaoPresunto.excluir(novoPresunto);
             
             msg = "Defunto incinerado com sucesso";

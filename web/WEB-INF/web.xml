@@ -16,6 +16,7 @@
         <servlet-name>PresuntoControleAlterar</servlet-name>
         <servlet-class>controle.PresuntoControleAlterar</servlet-class>
     </servlet>
+    
     <servlet-mapping>
         <servlet-name>PresuntoControleIncluir</servlet-name>
         <url-pattern>/controle.presunto.incluir</url-pattern>
@@ -32,6 +33,7 @@
         <servlet-name>PresuntoControleAlterar</servlet-name>
         <url-pattern>/controle.presunto.alterar</url-pattern>
     </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30

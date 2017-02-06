@@ -14,8 +14,16 @@
     <body>
         <h1>Informativo do Sepultado</h1>
         
-        <b>Validade:</b> ${mensagem}<br>
-        
+        <b>${mensagem}</b>
+        <div>
+            <br>
+            ${finado.nome}<br>
+            ${finado.email}<br>
+            ${finado.altura}<br>
+            ${finado.peso}<br>
+        </div> 
+        <br>
+        <input type="text" name="txtBancoNome" value= "${finado.nome}" placeholder="${finado.email}">
         <a href="index.html">Voltar a pagina principal</a>
     </body>
 </html>

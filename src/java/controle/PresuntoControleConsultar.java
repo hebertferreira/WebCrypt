@@ -46,7 +46,7 @@ public class PresuntoControleConsultar extends HttpServlet {
             
             novoPresunto.setNome(request.getParameter("txtNome"));            
             
-            novoDaoPresunto.consultar(novoPresunto);
+            novoPresunto =  novoDaoPresunto.consultar(novoPresunto);
             
             request.setAttribute("finado", novoPresunto);
             
@@ -57,7 +57,7 @@ public class PresuntoControleConsultar extends HttpServlet {
             
         } catch (Exception exception) {
             
-            msg = exception.getMessage();
+            msg = "Ixi..não está aqui...vamos procurar novamente";
             coveiro = request.getRequestDispatcher("status.jsp");
             
         }finally{

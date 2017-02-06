@@ -14,7 +14,7 @@
     <body>
         <h1>Informativo do Miserável</h1>
         
-        <b>Ixi</b> ${mensagem}<br>
+        <b>Validação</b> ${mensagem}<br>
         <br>
         
         

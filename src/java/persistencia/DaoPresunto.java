@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import modelo.Presunto;
 
 /**
@@ -28,7 +29,7 @@ public class DaoPresunto {
     }
     
     
-    public void incluir(Presunto novoPresunto)throws Exception{
+    public void incluir(Presunto novoPresunto)throws SQLException{
         
         pst = con.prepareStatement("insert into presunto(nome, email, altura, peso) values(?,?,?,?)");
         
@@ -79,10 +80,12 @@ public class DaoPresunto {
         if(rs.next()){
             temp = new Presunto();
             
-            temp.setNome(rs.getString(1));
-            temp.setEmail(rs.getString(2));
-            temp.setAltura(rs.getDouble(3));
-            temp.setPeso(rs.getDouble(4));
+            //Os numeros são as colunas
+            
+            temp.setNome(rs.getString(2));
+            temp.setEmail(rs.getString(3));
+            temp.setAltura(rs.getDouble(4));
+            temp.setPeso(rs.getDouble(5));
         }
         
         pst.close();

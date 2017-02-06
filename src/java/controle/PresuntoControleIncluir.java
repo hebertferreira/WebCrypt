@@ -21,8 +21,6 @@ import persistencia.DaoPresunto;
  */
 public class PresuntoControleIncluir extends HttpServlet {
 
-        
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -35,35 +33,36 @@ public class PresuntoControleIncluir extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+
         Presunto novoPresunto = null;
         DaoPresunto novoDaoPresunto = null;
         RequestDispatcher coveiro = null;
         String msg = null;
-        
+
         try {
-            
-            
+
             novoPresunto = new Presunto();
             novoDaoPresunto = new DaoPresunto();
-            
+
             novoPresunto.setNome(request.getParameter("txtNome"));
             novoPresunto.setEmail(request.getParameter("txtEmail"));
             novoPresunto.setAltura(Double.parseDouble(request.getParameter("txtAltura")));
             novoPresunto.setPeso(Double.parseDouble(request.getParameter("txtPeso")));
-            
+
             novoDaoPresunto.incluir(novoPresunto);
+
             msg = "Novo registro criado com sucesso";
-            
+
         } catch (Exception exception) {
-            
+
             msg = "Ixi...deu ruim pro finado!!!";
-        }finally{
             
-            request.setAttribute("finado", msg);
-            coveiro = request.getRequestDispatcher("resultado.jsp");
+        } finally {
+
+            request.setAttribute("mensagem", msg);
+            coveiro = request.getRequestDispatcher("status.jsp");
             coveiro.forward(request, response);
-                    
+
         }
     }
 
